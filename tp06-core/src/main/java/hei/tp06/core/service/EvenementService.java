@@ -10,6 +10,8 @@ import java.util.List;
  */
 public interface EvenementService {
 
+    List<Evenement> findById(Long id);
+
     List<Evenement> findByTitle(String title);
 
     List<Evenement> findByStart(Date start);

@@ -18,6 +18,11 @@ public class EvenementServiceImpl implements EvenementService{
     private EvenementDAO evenementDAO;
 
     @Override
+    public List<Evenement> findById(Long id) {
+        return evenementDAO.findById(id);
+    }
+
+    @Override
     public List<Evenement> findByTitle(String title){
         return evenementDAO.findByTitle(title);
     }

@@ -11,7 +11,11 @@ import java.util.List;
  */
 public interface EvenementDAO extends JpaRepository<Evenement,Long>{
 
+    List<Evenement> findById(Long id);
+
     List<Evenement> findByTitle(String title);
 
     List<Evenement> findByStart(Date start);
+
+    void delete(Long id);
 }
