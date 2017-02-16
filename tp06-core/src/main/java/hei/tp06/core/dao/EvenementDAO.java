@@ -4,7 +4,6 @@ import hei.tp06.core.entity.Evenement;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,9 +19,7 @@ public interface EvenementDAO extends JpaRepository<Evenement,Long>{
 
     List<Evenement> findAll();
 
-   /*void saveEv(Evenement evenement);
-
-
+/*
 
    void deleteEv(Long id);*/
 }

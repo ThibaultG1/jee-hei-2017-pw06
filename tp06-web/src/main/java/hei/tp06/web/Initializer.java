@@ -23,18 +23,18 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] { AppConfig.class, DBConfig.class };
+        return new Class<?>[] { AppConfig.class, DBConfig.class};
     }
 
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] {WSConfig.class};
+        return new Class<?>[]{WSConfig.class};
     }
 
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] { "/" };
+        return new String[] { "/web/" };
     }
 }

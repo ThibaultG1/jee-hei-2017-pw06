@@ -19,7 +19,7 @@ import com.jolbox.bonecp.BoneCPDataSource;
 public class DBConfig {
 
     @Bean(destroyMethod = "close")
-    public DataSource dataSource(Properties dbProperties) {
+    public DataSource dataSource(Properties dbProperties){
         BoneCPDataSource dataSource = new BoneCPDataSource();
         dataSource.setDriverClass(dbProperties.getProperty("driverClass"));
         dataSource.setJdbcUrl(dbProperties.getProperty("jdbcUrl"));

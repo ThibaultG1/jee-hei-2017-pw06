@@ -1,9 +1,6 @@
 package hei.tp06.core.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -16,18 +13,27 @@ public class Evenement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
+    @Column(name="start")
     private Timestamp start;
+
+    @Column(name="end")
     private Timestamp end;
+
+    @Column(name="title")
     private String title;
+
+    @Column(name="color")
     private String color;
+
+    @Column(name="description")
     private String description;
 
     public Evenement() {
     }
 
-    public Evenement(long id, Timestamp start, Timestamp end, String title, String color, String description) {
+    public Evenement(Long id, Timestamp start, Timestamp end, String title, String color, String description) {
         this.id = id;
         this.start = start;
         this.end = end;
@@ -36,13 +42,17 @@ public class Evenement {
         this.description = description;
     }
 
+    public Evenement(String title)
+    {
+        this.title = title;
+    }
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public Date getStart() {
+    public Timestamp getStart() {
         return start;
     }
 
@@ -50,7 +60,7 @@ public class Evenement {
         this.start = start;
     }
 
-    public Date getEnd() {
+    public Timestamp getEnd() {
         return end;
     }
 

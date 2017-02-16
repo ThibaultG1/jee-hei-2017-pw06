@@ -23,10 +23,19 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class RestControllerImpl implements RestController {
 
+
     private static final Logger logger = LoggerFactory.getLogger(RestControllerImpl.class);
 
     @Inject
     private EvenementService evenementService;
+
+    @GET
+    @Path("/tp06-web/api/evenements")
+    public List<Evenement> getEvenements()
+    {
+        return evenementService.findAll();
+    }
+
 
     @GET
     @Path("/tp06-web/api/evenements/{id}")
@@ -34,7 +43,7 @@ public class RestControllerImpl implements RestController {
         logger.info("Liste des évenements retournée");
        return evenementService.findById(id);
     }
-/*
+
     @POST
     @Path("/tp06-web/api/evenements/")
     @Consumes("application/json")
@@ -42,6 +51,6 @@ public class RestControllerImpl implements RestController {
         logger.info("Evénement enregistré");
         evenementService.save(evenement);
 
-    }*/
+    }
 
 }

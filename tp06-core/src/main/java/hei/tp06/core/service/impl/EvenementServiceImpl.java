@@ -16,36 +16,24 @@ import java.util.List;
 public class EvenementServiceImpl implements EvenementService{
 
     @Inject
-    private EvenementDAO evenementDAO;
+    EvenementDAO evenementDAO;
 
-    @Override
     public Evenement findById(Long id) {
         return evenementDAO.findById(id);
     }
 
-    @Override
     public Evenement findByTitle(String title){
         return evenementDAO.findByTitle(title);
     }
 
-    @Override
     public Evenement findByStart(Timestamp start){
         return  evenementDAO.findByStart(start);
     }
 
+    public List<Evenement> findAll(){return evenementDAO.findAll(); }
 
-    @Override
-    public List<Evenement> findAll(){
-        return evenementDAO.findAll();
-    }
-
-    /*@Override
-    public void save(Evenement evenement){
-        evenementDAO.saveEv(evenement);
-    }
-
-
-
+    public void save(Evenement evenement){ evenementDAO.save(evenement); }
+/*
     @Override
     public void deleteEvenement(long id){
         evenementDAO.deleteEv(id);

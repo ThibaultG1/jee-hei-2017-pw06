@@ -20,8 +20,9 @@ public interface EvenementService {
 
     List<Evenement> findAll();
 
-   /* void save(Evenement evenement);
 
+    void save(Evenement evenement);
 
+/*
     void deleteEvenement(long id);*/
 }
