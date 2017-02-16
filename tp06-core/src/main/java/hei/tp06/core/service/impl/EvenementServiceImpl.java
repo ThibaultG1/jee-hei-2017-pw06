@@ -33,9 +33,9 @@ public class EvenementServiceImpl implements EvenementService{
         return  evenementDAO.findByStart(start);
     }
 
-    @Override
-    public void saveEvenement(Evenement evenement){
-        evenementDAO.saveEvenement(evenement);
+    /*@Override
+    public void save(Evenement evenement){
+        evenementDAO.saveEv(evenement);
     }
 
     @Override
@@ -45,6 +45,6 @@ public class EvenementServiceImpl implements EvenementService{
 
     @Override
     public void deleteEvenement(long id){
-        evenementDAO.deleteEvenement(id);
-    }
+        evenementDAO.deleteEv(id);
+    }*/
 }

@@ -17,9 +17,9 @@ public interface EvenementService {
 
     Evenement findByStart(Timestamp start);
 
-    void saveEvenement(Evenement evenement);
+   /* void save(Evenement evenement);
 
     List<Evenement> findAll();
 
-    void deleteEvenement(long id);
+    void deleteEvenement(long id);*/
 }

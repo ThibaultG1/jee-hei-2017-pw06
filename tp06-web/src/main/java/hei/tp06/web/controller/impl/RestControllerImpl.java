@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -36,8 +37,11 @@ public class RestControllerImpl implements RestController {
 
     @POST
     @Path("/tp06-web/api/evenements/")
-    public void setEvenement(@PathParam("id") Long id){
-        evenementService.deleteEvenement(id);
+    @Consumes("application/json")
+    public void setEvenement(Evenement evenement){
+        logger.info("Evénement enregistré");
+      //  evenementService.save(evenement);
+
     }
 
 }
