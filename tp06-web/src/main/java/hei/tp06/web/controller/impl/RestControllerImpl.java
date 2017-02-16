@@ -30,7 +30,7 @@ public class RestControllerImpl implements RestController {
     private EvenementService evenementService;
 
     @GET
-    @Path("/tp06-web/api/evenements")
+    @Path("/evenements")
     public List<Evenement> getEvenements()
     {
         return evenementService.findAll();
@@ -38,14 +38,14 @@ public class RestControllerImpl implements RestController {
 
 
     @GET
-    @Path("/tp06-web/api/evenements/{id}")
-    public Evenement getEvenenement(@PathParam("id") Long id){
+    @Path("/evenements/{id}")
+    public Evenement getEvenement(@PathParam("id") Long id){
         logger.info("Liste des évenements retournée");
        return evenementService.findById(id);
     }
 
     @POST
-    @Path("/tp06-web/api/evenements/")
+    @Path("/evenements")
     @Consumes("application/json")
     public void setEvenement(Evenement evenement){
         logger.info("Evénement enregistré");
