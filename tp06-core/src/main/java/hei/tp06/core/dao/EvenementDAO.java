@@ -18,9 +18,11 @@ public interface EvenementDAO extends JpaRepository<Evenement,Long>{
 
     Evenement findByStart(Timestamp start);
 
+    List<Evenement> findAll();
+
    /*void saveEv(Evenement evenement);
 
-    List<Evenement> findAll();
+
 
    void deleteEv(Long id);*/
 }

@@ -33,15 +33,18 @@ public class EvenementServiceImpl implements EvenementService{
         return  evenementDAO.findByStart(start);
     }
 
-    /*@Override
-    public void save(Evenement evenement){
-        evenementDAO.saveEv(evenement);
-    }
 
     @Override
     public List<Evenement> findAll(){
         return evenementDAO.findAll();
     }
+
+    /*@Override
+    public void save(Evenement evenement){
+        evenementDAO.saveEv(evenement);
+    }
+
+
 
     @Override
     public void deleteEvenement(long id){

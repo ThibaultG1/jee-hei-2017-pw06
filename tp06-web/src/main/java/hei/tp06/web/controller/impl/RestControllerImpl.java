@@ -34,14 +34,14 @@ public class RestControllerImpl implements RestController {
         logger.info("Liste des évenements retournée");
        return evenementService.findById(id);
     }
-
+/*
     @POST
     @Path("/tp06-web/api/evenements/")
     @Consumes("application/json")
     public void setEvenement(Evenement evenement){
         logger.info("Evénement enregistré");
-      //  evenementService.save(evenement);
+        evenementService.save(evenement);
 
-    }
+    }*/
 
 }
