@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -18,23 +19,23 @@ public class EvenementServiceImpl implements EvenementService{
     private EvenementDAO evenementDAO;
 
     @Override
-    public List<Evenement> findById(Long id) {
+    public Evenement findById(Long id) {
         return evenementDAO.findById(id);
     }
 
     @Override
-    public List<Evenement> findByTitle(String title){
+    public Evenement findByTitle(String title){
         return evenementDAO.findByTitle(title);
     }
 
     @Override
-    public List<Evenement> findByStart(Date start){
+    public Evenement findByStart(Timestamp start){
         return  evenementDAO.findByStart(start);
     }
 
     @Override
     public void saveEvenement(Evenement evenement){
-        evenementDAO.save(evenement);
+        evenementDAO.saveEvenement(evenement);
     }
 
     @Override
@@ -44,6 +45,6 @@ public class EvenementServiceImpl implements EvenementService{
 
     @Override
     public void deleteEvenement(long id){
-        evenementDAO.delete(id);
+        evenementDAO.deleteEvenement(id);
     }
 }

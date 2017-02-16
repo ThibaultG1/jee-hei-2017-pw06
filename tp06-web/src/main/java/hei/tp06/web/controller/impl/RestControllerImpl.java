@@ -29,9 +29,9 @@ public class RestControllerImpl implements RestController {
 
     @GET
     @Path("/tp06-web/api/evenements/{id}")
-    public Evenement getCurrentEvenenement(@PathParam("id") Long id){
+    public Evenement getEvenenement(@PathParam("id") Long id){
         logger.info("Liste des évenements retournée");
-       return evenementService.findById();
+       return evenementService.findById(id);
     }
 
     @POST

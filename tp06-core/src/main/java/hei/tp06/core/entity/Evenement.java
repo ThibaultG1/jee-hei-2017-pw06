@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -16,8 +18,8 @@ public class Evenement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private Date start;
-    private Date end;
+    private Timestamp start;
+    private Timestamp end;
     private String title;
     private String color;
     private String description;
@@ -25,7 +27,7 @@ public class Evenement {
     public Evenement() {
     }
 
-    public Evenement(long id, Date start, Date end, String title, String color, String description) {
+    public Evenement(long id, Timestamp start, Timestamp end, String title, String color, String description) {
         this.id = id;
         this.start = start;
         this.end = end;
@@ -42,7 +44,7 @@ public class Evenement {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(Timestamp start) {
         this.start = start;
     }
 
@@ -50,7 +52,7 @@ public class Evenement {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(Timestamp end) {
         this.end = end;
     }
 

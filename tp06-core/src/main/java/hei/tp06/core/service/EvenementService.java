@@ -2,6 +2,7 @@ package hei.tp06.core.service;
 
 import hei.tp06.core.entity.Evenement;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -10,11 +11,11 @@ import java.util.List;
  */
 public interface EvenementService {
 
-    List<Evenement> findById(Long id);
+    Evenement findById(Long id);
 
-    List<Evenement> findByTitle(String title);
+    Evenement findByTitle(String title);
 
-    List<Evenement> findByStart(Date start);
+    Evenement findByStart(Timestamp start);
 
     void saveEvenement(Evenement evenement);
 
