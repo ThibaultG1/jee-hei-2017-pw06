@@ -42,12 +42,6 @@ public class Evenement {
         this.description = description;
     }
 
-    public Evenement(String title)
-    {
-        this.title = title;
-    }
-
-
     public Long getId() {
         return id;
     }

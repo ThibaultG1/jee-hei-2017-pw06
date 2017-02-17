@@ -22,20 +22,8 @@ public class EvenementServiceImpl implements EvenementService{
         return evenementDAO.findById(id);
     }
 
-    public Evenement findByTitle(String title){
-        return evenementDAO.findByTitle(title);
-    }
-
-    public Evenement findByStart(Timestamp start){
-        return  evenementDAO.findByStart(start);
-    }
-
     public List<Evenement> findAll(){return evenementDAO.findAll(); }
 
     public void save(Evenement evenement){ evenementDAO.save(evenement); }
-/*
-    @Override
-    public void deleteEvenement(long id){
-        evenementDAO.deleteEv(id);
-    }*/
+
 }

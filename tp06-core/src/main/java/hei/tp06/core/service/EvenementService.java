@@ -13,16 +13,8 @@ public interface EvenementService {
 
     Evenement findById(Long id);
 
-    Evenement findByTitle(String title);
-
-    Evenement findByStart(Timestamp start);
-
-
     List<Evenement> findAll();
-
 
     void save(Evenement evenement);
 
-/*
-    void deleteEvenement(long id);*/
 }
