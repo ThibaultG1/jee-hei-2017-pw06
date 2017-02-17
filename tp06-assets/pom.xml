@@ -12,13 +12,6 @@
 
         <dependency>
             <groupId>org.webjars</groupId>
-            <artifactId>angular-ui-calendar</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>3.3.7-1</version>
         </dependency>

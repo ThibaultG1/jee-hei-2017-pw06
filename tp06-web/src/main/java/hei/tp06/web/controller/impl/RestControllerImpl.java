@@ -18,7 +18,6 @@ import java.util.List;
 
 
 @Named
-@Path("/tp06-web")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RestControllerImpl implements RestController {
